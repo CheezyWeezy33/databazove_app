@@ -4,7 +4,7 @@ require_once "connect.php";
 $sql_customers = "SELECT * FROM customers";
 $sql_orders = "SELECT * FROM orders";
 $sql_suppliers = "SELECT * FROM suppliers";
-
+ 
 $result_customers = $connection->query($sql_customers);
 $result_orders = $connection->query($sql_orders);
 $result_suppliers = $connection->query($sql_suppliers);
