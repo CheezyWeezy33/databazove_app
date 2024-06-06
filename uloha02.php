@@ -11,7 +11,7 @@ require_once "connect.php";
 
     <h1>požiadavka 01</h1>
     <table border="1">
-        <tr>
+        <tr> 
             <th>OrderID</th>
             <th>CustomerID</th>
             <th>CompanyName</th>
