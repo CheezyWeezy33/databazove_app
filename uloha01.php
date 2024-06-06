@@ -19,7 +19,7 @@ $sql = "
     SELECT * FROM orders;
     SELECT * FROM suppliers;
 ";
-$conn->multi_query($sql);
+$connection->multi_query($sql);
 do {
     if ($result = $conn->store_result()) {
         echo "<table>";
