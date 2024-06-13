@@ -80,15 +80,16 @@
         $sql = "SELECT o.OrderID, e.FirstName, e.LastName
                 FROM orders o
                 INNER JOIN employees e ON o.EmployeeID = e.EmployeeID
-                WHERE o.ShippedDate > '1996-12-31'";
-        execute_query($connection, $sql, "ID objednávok a súvisiace mená zamestnancov pre objednávky, ktoré boli odoslané po 1996-12-31");
+                WHERE o.ShippedDate > '1996-5-12'";
+        execute_query($connection, $sql, "ID objednávok a súvisiace mená zamestnancov pre objednávky, ktoré boli odoslané po 1996-5-12");
 
     
         echo "<h1>požiadavka 06</h1>";
         $sql = "SELECT ProductID, SUM(Quantity) AS TotalQuantity
                 FROM `order details`
                 WHERE Quantity < 200
-                GROUP BY ProductID";
+                GROUP BY ProductID;
+                HAVING COUNT(*) < 200"
         execute_query($connection, $sql, "Celkové množstvo objednaných produktov (menej ako 200)");
 
         
